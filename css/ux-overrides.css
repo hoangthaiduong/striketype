@@ -1,0 +1,118 @@
+/* TypeStrike UX refinement layer — clearer hierarchy, spacing and action priority. */
+.section-kicker { display:block; margin:0 0 7px; color:#315EFB; font-size:10px; font-weight:850; letter-spacing:.12em; }
+.page-intro { align-items:center; gap:24px; margin-bottom:24px; }
+.page-intro > div:first-child { min-width:0; }
+.page-intro h2 { max-width:800px; font-size:clamp(21px,2vw,27px); letter-spacing:-.04em; }
+.page-intro p { max-width:760px; margin:7px 0 0; font-size:13px; line-height:1.65; }
+.intro-actions { flex:0 0 auto; }
+.practice-layout { grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr); gap:20px; align-items:start; }
+.setup-card { padding:25px; }
+.setup-title { display:flex; align-items:center; gap:13px; padding-bottom:20px; margin-bottom:21px; border-bottom:1px solid #EEF1F6; }
+.setup-title > div:nth-child(2) { min-width:0; }
+.setup-title h3 { font-size:18px; letter-spacing:-.025em; }
+.setup-title p { margin:4px 0 0; font-size:12px; }
+.setup-status-pill { margin-left:auto; padding:6px 9px; border:1px solid #DCE7FF; border-radius:999px; background:#F4F7FF; color:#315EFB; font-size:9px; font-weight:850; letter-spacing:.07em; white-space:nowrap; }
+.setup-group { padding:0 0 21px; margin-bottom:21px; border-bottom:1px solid #EEF1F6; }
+.setup-group:last-of-type { margin-bottom:17px; }
+.setup-group-heading { display:flex; align-items:flex-start; gap:11px; margin-bottom:15px; }
+.setup-step-number { display:grid; place-items:center; width:30px; height:30px; flex:0 0 auto; border:1px solid #DCE6FF; border-radius:10px; background:#EFF4FF; color:#315EFB; font-size:11px; font-weight:850; }
+.setup-group-heading h4 { margin:0; font-size:13px; line-height:1.35; font-weight:800; }
+.setup-group-heading p { margin:3px 0 0; color:#7C879B; font-size:11px; }
+.setup-fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px 16px; }
+.setup-fields .field { min-width:0; }
+.setup-fields .field-wide { grid-column:1 / -1; }
+.setup-fields label { margin-bottom:7px; font-size:11px; color:#344054; font-weight:750; }
+.setup-fields select { min-height:44px; padding:10px 12px; border:1px solid #D9DFEA; border-radius:10px; background-color:#fff; font-size:12px; color:#101828; }
+.setup-fields select:focus { border-color:#91A9FF; box-shadow:0 0 0 3px rgba(49,94,251,.09); outline:0; }
+.setup-fields small { margin-top:5px; font-size:10px; line-height:1.5; }
+.content-fields { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.content-fields .field:first-child { grid-column:1 / -1; }
+.content-fields #practice-language-field,
+.content-fields #practice-topic-field { grid-column:1 / -1; }
+.challenge-fields { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.text-length-field { grid-column:1 / -1; }
+.segmented { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:5px; padding:4px; border:1px solid #E0E5EF; border-radius:11px; background:#F7F9FC; }
+.segmented button { min-height:36px; padding:8px; border:0; border-radius:8px; background:transparent; color:#667085; font-size:11px; font-weight:700; cursor:pointer; }
+.segmented button:hover { color:#315EFB; background:#EDF2FF; }
+.segmented button.active { background:#fff; color:#315EFB; box-shadow:0 1px 4px rgba(16,24,40,.12); }
+.focus-auto-note { display:flex; align-items:flex-start; gap:11px; margin:0 0 19px; padding:13px 14px; border:1px solid #DCE7FF; border-radius:12px; background:#F5F8FF; }
+.focus-auto-icon { display:grid; place-items:center; width:31px; height:31px; flex:0 0 auto; border-radius:9px; background:#E6EDFF; color:#315EFB; }
+.focus-auto-note > div { min-width:0; flex:1; }
+.focus-auto-note strong { display:block; color:#1D3FAF; font-size:11px; }
+.focus-auto-note p { margin:3px 0 0; color:#6678A2; font-size:10.5px; line-height:1.55; }
+.focus-auto-note kbd { padding:1px 5px; border:1px solid #CFD9F1; border-bottom-width:2px; border-radius:4px; background:#fff; color:#2948A8; font:inherit; font-size:10px; }
+.focus-auto-state { margin-left:auto; padding:4px 6px; border-radius:6px; background:#E1E9FF; color:#315EFB; font-size:9px; font-weight:900; letter-spacing:.08em; }
+.setup-bottom { display:flex; flex-direction:column; align-items:stretch; gap:10px; margin-top:3px; }
+.start-session-button { width:100%; min-height:49px; justify-content:center; border-radius:11px; box-shadow:0 5px 12px rgba(49,94,251,.16); }
+.start-session-button .button-arrow { display:inline-flex; margin-left:6px; }
+.setup-hint { justify-content:center; text-align:center; line-height:1.55; }
+.practice-preview { position:sticky; top:22px; min-height:0; padding:23px; }
+.preview-top { align-items:flex-start; margin-bottom:17px; }
+.preview-top h3 { font-size:16px; letter-spacing:-.02em; }
+.preview-tag { border:1px solid #E4E7EC; background:#F8FAFC; color:#667085; }
+.preview-copy { min-height:235px; padding:24px; border:1px solid #E9EEF8; border-radius:14px; background:linear-gradient(180deg,#FBFCFF,#F6F8FE); }
+.preview-sample { color:#65728B; font-size:16px; line-height:2; }
+.preview-sample strong { padding:1px 3px; border-radius:4px; background:#E7EEFF; color:#315EFB; }
+.preview-checklist { display:grid; gap:10px; margin-top:18px; padding-top:16px; border-top:1px solid #EEF1F6; }
+.preview-checklist > div { display:flex; align-items:center; gap:8px; color:#667085; font-size:11px; }
+.preview-checklist svg { color:#16A34A; flex:0 0 auto; }
+/* Battle setup: the hierarchy is setup first, fair-play explanation second. */
+.battle-hero { padding:26px 29px; margin-bottom:20px; background:linear-gradient(115deg,#FFFFFF,#F0F5FF); }
+.battle-hero h2 { font-size:clamp(23px,2.2vw,29px); }
+.battle-hero p { max-width:680px; font-size:13px; }
+.battle-setup-grid { grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr); gap:20px; }
+.battle-setup-grid > .card { padding:24px; }
+.battle-setup-grid .section-heading { margin-bottom:20px; }
+.battle-setup-grid .section-heading h2 { font-size:17px; }
+.battle-setup-grid .field label { font-size:11px; font-weight:750; }
+.battle-setup-grid .field input { min-height:44px; border-radius:10px; }
+.difficulty-cards { gap:10px; margin:13px 0 20px; }
+.difficulty-option { min-height:142px; padding:15px 13px; border-radius:13px; }
+.difficulty-option strong { font-size:13px; }
+.difficulty-option small { font-size:10.5px; }
+.battle-setup-grid [data-action="start-battle"] { min-height:49px; }
+.battle-rules { gap:17px; }
+.battle-rule { gap:12px; }
+.battle-rule-icon { width:35px; height:35px; border:1px solid #E9EDF4; background:#F8FAFD; }
+.battle-rule strong { font-size:12px; }
+.battle-rule p { font-size:11px; line-height:1.6; }
+/* General component polish to keep page rhythm consistent. */
+.card { border-color:#E3E8F1; box-shadow:0 2px 8px rgba(16,24,40,.025); }
+.card:hover { border-color:#D9E1F0; }
+.section-heading { gap:16px; }
+.section-heading > div { min-width:0; }
+.section-heading h2 { gap:8px; }
+.section-heading p { font-size:11.5px; line-height:1.55; }
+.btn { font-weight:700; }
+.btn-primary { box-shadow:0 2px 5px rgba(49,94,251,.12); }
+.btn-primary:hover { box-shadow:0 5px 12px rgba(49,94,251,.18); }
+.settings-grid { align-items:start; gap:20px; }
+.settings-column { gap:20px; }
+.data-action-copy p { line-height:1.55; }
+@media (max-width:1180px) {
+  .practice-layout { grid-template-columns:minmax(0,1fr); }
+  .practice-preview { position:static; }
+  .preview-copy { min-height:160px; }
+  .preview-checklist { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media (max-width:980px) {
+  .practice-layout { grid-template-columns:1fr; }
+  .practice-preview { order:2; }
+  .battle-setup-grid { grid-template-columns:1fr; }
+  .setup-card { order:0; }
+}
+@media (max-width:650px) {
+  .page-intro { align-items:flex-start; gap:15px; }
+  .page-intro h2 { font-size:22px; }
+  .setup-card { padding:18px; }
+  .setup-title { align-items:flex-start; flex-wrap:wrap; gap:10px; }
+  .setup-title .setup-status-pill { margin-left:auto; }
+  .setup-title h3 { font-size:16px; }
+  .setup-fields,.content-fields,.challenge-fields { grid-template-columns:1fr; }
+  .content-fields .field:first-child,.setup-fields .field-wide,.content-fields #practice-language-field,.content-fields #practice-topic-field,.text-length-field { grid-column:1; }
+  .focus-auto-note { padding:11px; }
+  .focus-auto-state { display:none; }
+  .preview-checklist { grid-template-columns:1fr; }
+  .battle-setup-grid > .card { padding:18px; }
+  .difficulty-option { min-height:125px; padding:12px 9px; }
+}

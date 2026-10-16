@@ -1,0 +1,6 @@
+/* Background music settings card: calm, premium local-audio controls. */
+.background-music-card {
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(135, 157, 255, .10), transparent 22rem),
+    linear-gradient(135deg, rgba(255,255,255,.98), rgba(247,249,255,.98));
+}

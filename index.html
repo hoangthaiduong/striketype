@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f7fc" />
+    <meta
+      name="description"
+      content="TypeStrike — build typing speed, accuracy, and consistency one session at a time."
+    />
+    <title>TypeStrike — Type faster. Aim higher.</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/practice.css" />
+    <link rel="stylesheet" href="css/focus-mode.css" />
+    <link rel="stylesheet" href="css/battle.css" />
+    <link rel="stylesheet" href="css/quests.css" />
+    <link rel="stylesheet" href="css/achievements.css" />
+    <link rel="stylesheet" href="css/statistics.css" />
+    <link rel="stylesheet" href="css/modals.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/ux-overrides.css" />
+    <link rel="stylesheet" href="css/design-refresh.css" />
+    <link rel="stylesheet" href="css/viewport-fit.css" />
+    <link rel="stylesheet" href="css/monthly-polish.css" />
+    <link rel="stylesheet" href="css/background-music.css" />
+    <script defer src="data/vocabulary.js"></script>
+    <script defer src="data/sentence-templates.js"></script>
+    <script defer src="data/paragraph-library.js"></script>
+    <script defer src="data/code-snippets.js"></script>
+    <script defer src="data/quest-config.js"></script>
+    <script defer src="js/icon-library.js"></script>
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/ui.js"></script>
+    <script defer src="js/content-generator.js"></script>
+    <script defer src="js/adaptive-difficulty.js"></script>
+    <script defer src="js/sound.js"></script>
+    <script defer src="js/settings.js"></script>
+    <script defer src="js/background-music.js"></script>
+    <script defer src="js/daily-quests.js"></script>
+    <script defer src="js/achievements.js"></script>
+    <script defer src="js/statistics.js"></script>
+    <script defer src="js/typing-engine.js"></script>
+    <script defer src="js/focus-mode.js"></script>
+    <script defer src="js/typing-battle.js"></script>
+    <script defer src="js/navigation.js"></script>
+    <script defer src="js/router.js"></script>
+    <script defer src="js/app.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">
+            <img
+              src="./favicon.svg"
+              alt=""
+              width="48"
+              height="48"
+              style="
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              "
+            />
+          </div>
+          <div class="brand-copy">
+            <strong>TypeStrike</strong>
+            <span>TYPE FASTER. AIM HIGHER.</span>
+          </div>
+        </div>
+
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav class="side-nav" id="side-nav">
+          <button class="nav-item active" type="button" data-route="dashboard">
+            <span data-icon="grid"></span><span>Dashboard</span>
+          </button>
+          <button class="nav-item" type="button" data-route="practice">
+            <span data-icon="keyboard"></span><span>Practice</span
+            ><span class="nav-trailing" data-icon="arrow-up-right"></span>
+          </button>
+          <button class="nav-item" type="button" data-route="battle">
+            <span data-icon="swords"></span><span>Typing Battle</span>
+          </button>
+          <button class="nav-item" type="button" data-route="quests">
+            <span data-icon="target"></span><span>Daily Quests</span
+            ><span class="nav-count" id="quest-nav-count">0</span>
+          </button>
+          <button class="nav-item" type="button" data-route="achievements">
+            <span data-icon="medal"></span><span>Achievements</span>
+          </button>
+          <button class="nav-item" type="button" data-route="statistics">
+            <span data-icon="chart"></span><span>Statistics</span>
+          </button>
+        </nav>
+        <div class="sidebar-label sidebar-label-bottom">PREFERENCES</div>
+        <nav class="side-nav">
+          <button class="nav-item" type="button" data-route="settings">
+            <span data-icon="settings"></span><span>Settings</span>
+          </button>
+        </nav>
+        <div class="sidebar-spacer"></div>
+        <div class="sidebar-progress" id="sidebar-progress"></div>
+        <div class="sidebar-foot">
+          <span class="status-dot"></span
+          ><span>Progress saved on this device</span>
+        </div>
+      </aside>
+      <div class="app-main">
+        <header class="topbar">
+          <div class="topbar-start">
+            <button
+              type="button"
+              class="icon-button mobile-menu"
+              data-action="toggle-sidebar"
+              aria-label="Open navigation"
+              title="Open navigation"
+            >
+              <span data-icon="menu"></span>
+            </button>
+            <div>
+              <div class="eyebrow" id="page-eyebrow">
+                YOUR PERSONAL WORKSPACE
+              </div>
+              <h1 id="page-heading">Dashboard</h1>
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <span class="date-pill"
+              ><span data-icon="calendar"></span
+              ><span id="today-label">Today</span></span
+            >
+            <button
+              type="button"
+              class="icon-button"
+              id="sound-toggle"
+              data-action="sound-toggle"
+              aria-label="Toggle sound"
+              title="Toggle sound"
+            >
+              <span data-icon="volume-2"></span>
+            </button>
+            <button
+              type="button"
+              class="avatar-button"
+              data-route="settings"
+              aria-label="Open settings"
+            >
+              <span>TS</span>
+            </button>
+          </div>
+        </header>
+        <main class="page-content" id="main-content" tabindex="-1">
+          <div class="loading-state">
+            <div class="spinner"></div>
+            <p>Getting your workspace ready…</p>
+          </div>
+        </main>
+        <footer class="app-footer">
+          <span
+            >TypeStrike <span class="footer-dot">·</span> Build a little speed
+            every day.</span
+          ><span>Offline-ready <span class="footer-status"></span></span>
+        </footer>
+      </div>
+    </div>
+    <div
+      id="toast-region"
+      class="toast-region"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+    <div id="modal-root"></div>
+    <input
+      type="file"
+      id="import-file-input"
+      accept=".tstrike,.json,application/json"
+      hidden
+    />
+  </body>
+</html>

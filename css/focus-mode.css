@@ -1,0 +1,73 @@
+/* Full-screen distraction-free layout while a practice session or match is active. */
+body.session-active-practice .page-content > :not(#practice-session-root),
+body.session-active-battle .page-content > :not(#battle-session-root),
+body.session-result-practice .page-content > :not(#practice-session-root),
+body.session-result-battle .page-content > :not(#battle-session-root) { display:none !important; }
+body.session-active-practice #practice-session-root,
+body.session-active-battle #battle-session-root { display:block !important; width:min(100%,1160px); margin:0 auto !important; }
+body.focus-mode { overflow-x:hidden; background:#F4F7FD; }
+body.focus-mode .sidebar,
+body.focus-mode .topbar,
+body.focus-mode .app-footer { display:none !important; }
+body.focus-mode .app-shell { display:block; min-height:100vh; min-height:100dvh; }
+body.focus-mode .app-main { display:block; width:100%; min-height:100vh; min-height:100dvh; margin:0; }
+body.focus-mode .page-content { display:flex; flex-direction:column; justify-content:center; width:100%; max-width:none; min-height:100vh; min-height:100dvh; margin:0; padding:clamp(15px,3vw,42px); }
+body.focus-mode .page-content > :not(#practice-session-root):not(#battle-session-root) { display:none !important; }
+body.focus-mode #practice-session-root,
+body.focus-mode #battle-session-root { display:block !important; width:min(100%,1160px); margin:0 auto !important; animation:focusIn .22s ease-out; }
+body.focus-mode .session-shell { width:100%; max-width:1160px; margin:0 auto; }
+body.focus-mode .focus-banner { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:9px 13px; margin:0 0 12px; border:1px solid #DCE6FF; border-radius:11px; color:#315EFB; background:#F5F8FF; font-size:11px; font-weight:750; }
+body.focus-mode .focus-banner > span { display:flex; align-items:center; gap:8px; }
+body.focus-mode .focus-banner .btn { min-height:32px; }
+body.focus-mode .session-toolbar { padding:3px 2px 14px; margin-bottom:8px; }
+body.focus-mode .session-mode .session-symbol { width:42px; height:42px; border-radius:13px; }
+body.focus-mode .session-mode h2 { font-size:18px; }
+body.focus-mode .session-mode p { margin-top:4px; font-size:11px; }
+body.focus-mode .session-actions { opacity:1; }
+body.focus-mode .session-actions .btn { min-height:36px; }
+body.focus-mode .session-stats { gap:12px; margin-bottom:14px; }
+body.focus-mode .session-stat { padding:13px 16px; border-color:#E3E9F5; border-radius:14px; box-shadow:0 2px 7px rgba(28,45,90,.025); }
+body.focus-mode .session-stat label { color:#748099; font-size:10px; letter-spacing:.055em; }
+body.focus-mode .session-stat strong { font-size:clamp(19px,2vw,25px); }
+body.focus-mode .typing-panel { padding:clamp(22px,3.7vw,46px); border:1px solid #DFE6F3; border-radius:22px; background:#fff; box-shadow:0 18px 50px rgba(34,58,112,.075); }
+body.focus-mode .typing-panel-head { margin-bottom:22px; }
+body.focus-mode .typing-text { max-height:min(47vh,520px); overflow:auto; overscroll-behavior:contain; padding:3px 8px 6px 2px; font-size:clamp(23px,2.5vw,calc(var(--practice-font-size) * 1.45)); line-height:1.95; }
+body.focus-mode .typing-panel-foot { margin-top:18px; }
+body.focus-mode .session-bottom-note { display:none !important; }
+body.focus-mode .typing-panel:focus-within { border-color:#C7D5FF; box-shadow:0 18px 50px rgba(34,58,112,.09),0 0 0 3px rgba(49,94,251,.035); }
+body.focus-mode-battle .battle-arena { margin:0 0 14px !important; padding:17px 20px; border-color:#E0E7F3; border-radius:17px; box-shadow:0 5px 18px rgba(34,58,112,.035); }
+body.focus-mode-battle .battle-players { gap:14px; margin-bottom:14px; }
+body.focus-mode-battle .player-avatar { width:38px; height:38px; }
+body.focus-mode-battle .battle-progress-row { gap:22px; margin-bottom:12px; }
+body.focus-mode-battle .battle-progress-row .progress-track { height:7px; }
+body.focus-mode-battle .battle-meta-row { padding-top:10px; }
+body.focus-mode-battle .countdown-overlay { min-height:60vh; }
+body.focus-mode-battle .countdown-number { font-size:clamp(64px,11vw,108px); }
+body.focus-mode .result-card { width:min(100%,900px); max-height:calc(100dvh - 36px); overflow:auto; margin:0 auto; }
+body.focus-mode .toast-region { display:none !important; }
+body.focus-mode .typing-panel-head > span:last-child { display:none !important; }
+@keyframes focusIn { from { opacity:.82; transform:translateY(5px); } to { opacity:1; transform:translateY(0); } }
+@media (max-width:720px) {
+  body.focus-mode .page-content { justify-content:flex-start; padding:14px 12px 18px; }
+  body.focus-mode .focus-banner { margin-bottom:8px; }
+  body.focus-mode .session-toolbar { align-items:flex-start; }
+  body.focus-mode .session-actions { width:100%; }
+  body.focus-mode .session-actions .btn { flex:1; padding:8px 7px; font-size:11px; }
+  body.focus-mode .session-stats { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+  body.focus-mode .session-stat { padding:10px 12px; }
+  body.focus-mode .typing-panel { padding:18px 14px; border-radius:17px; }
+  body.focus-mode .typing-panel-head { margin-bottom:14px; }
+  body.focus-mode .typing-text { max-height:42vh; font-size:clamp(21px,5.6vw,28px); line-height:1.85; }
+  body.focus-mode-battle .battle-arena { padding:13px 12px; }
+  body.focus-mode-battle .battle-players { grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr); gap:6px; }
+  body.focus-mode-battle .player-avatar { width:31px; height:31px; }
+  body.focus-mode-battle .player-name strong { font-size:10px; }
+  body.focus-mode-battle .player-name span { font-size:9px; }
+  body.focus-mode-battle .versus { width:27px; height:27px; }
+  body.focus-mode-battle .battle-progress-row { gap:10px; }
+  body.focus-mode .result-card { max-height:none; padding:20px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  body.focus-mode #practice-session-root,
+  body.focus-mode #battle-session-root { animation:none; }
+}

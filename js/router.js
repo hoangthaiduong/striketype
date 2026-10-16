@@ -1,0 +1,9 @@
+(function(){
+  window.TS=window.TS||{};
+  const valid=['dashboard','practice','battle','quests','achievements','statistics','settings'];
+  let current='dashboard',navigating=false;
+  async function navigate(route,options){if(!valid.includes(route))route='dashboard';if(route===current&&!options?.force)return true;if(navigating)return false;navigating=true;try{const dirty=window.TS.TypingEngine&&window.TS.TypingEngine.isDirty()||window.TS.Battle&&window.TS.Battle.isDirty();if(dirty){const ok=await window.TS.UI.confirm({title:'Leave this session?',message:'Your unfinished run will be discarded. Completed sessions and saved progress will stay on this device.',confirmText:'Leave session',cancelText:'Keep practicing',danger:true});if(!ok){navigating=false;return false;}}if(window.TS.Battle)window.TS.Battle.abandon();else if(window.TS.TypingEngine)window.TS.TypingEngine.abandon();current=route;if(window.TS.App)window.TS.App.render();if(window.TS.Navigation)window.TS.Navigation.setActive(route);if(window.location.hash!=='#'+route)window.location.hash=route;navigating=false;return true;}catch(e){navigating=false;window.TS.UI.toast('Could not change page','Please try again.','error');return false;}}
+  function init(){const initial=(window.location.hash||'').replace(/^#/,'');current=valid.includes(initial)?initial:'dashboard';window.addEventListener('hashchange',()=>{const route=(window.location.hash||'').replace(/^#/,'');if(valid.includes(route)&&route!==current)navigate(route);});}
+  function force(route){return navigate(route,{force:true});}
+  window.TS.Router={get current(){return current;},setCurrent:r=>{if(valid.includes(r))current=r;},navigate:navigate,force:force,init:init,routes:valid};
+})();

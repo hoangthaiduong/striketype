@@ -1,0 +1,82 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="none">
+  <defs>
+    <linearGradient id="blue" x1="38" y1="36" x2="218" y2="226" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6EA0FF"/>
+      <stop offset=".48" stop-color="#315EFB"/>
+      <stop offset="1" stop-color="#1735B8"/>
+    </linearGradient>
+
+    <linearGradient id="key" x1="72" y1="86" x2="184" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DCE7FF"/>
+    </linearGradient>
+
+    <linearGradient id="gold" x1="143" y1="18" x2="199" y2="75" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDE68A"/>
+      <stop offset=".55" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+
+    <filter id="shadow" x="15" y="40" width="226" height="205" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#315EFB" flood-opacity=".23"/>
+    </filter>
+  </defs>
+
+  <!-- Large orbit -->
+  <circle cx="128" cy="133" r="111" stroke="#DCE7FF" stroke-width="2" stroke-dasharray="4 9"/>
+  <path d="M54 50A111 111 0 0 1 209 48" stroke="#AFC8FF" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="54" cy="50" r="5" fill="#315EFB"/>
+  <circle cx="209" cy="48" r="5" fill="#315EFB"/>
+
+  <!-- Speed trails -->
+  <path d="M12 105H43M7 119H35M15 133H39" stroke="#315EFB" stroke-width="4" stroke-linecap="round"/>
+  <path d="M213 105H244M221 119H249M217 133H241" stroke="#315EFB" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Battle arrows -->
+  <path d="M30 63H69L91 80L69 97H30L48 80Z" fill="#9AB8FF"/>
+  <path d="M226 63H187L165 80L187 97H226L208 80Z" fill="#9AB8FF"/>
+
+  <!-- Keyboard -->
+  <g filter="url(#shadow)">
+    <path d="M35 99L59 77H197L221 99V185L197 207H59L35 185Z" fill="url(#blue)"/>
+
+    <!-- Inner border -->
+    <path d="M48 103L65 88H191L208 103V180L191 196H65L48 180Z"
+          stroke="#FFFFFF" stroke-opacity=".72" stroke-width="2.5"/>
+
+    <!-- Top row -->
+    <g fill="url(#key)" stroke="#A6BFFF" stroke-width="1">
+      <rect x="62" y="104" width="25" height="21" rx="5"/>
+      <rect x="94" y="104" width="25" height="21" rx="5"/>
+      <rect x="126" y="104" width="25" height="21" rx="5"/>
+      <rect x="158" y="104" width="25" height="21" rx="5"/>
+
+      <!-- Middle row -->
+      <rect x="62" y="133" width="25" height="21" rx="5"/>
+      <rect x="94" y="133" width="25" height="21" rx="5"/>
+      <rect x="126" y="133" width="25" height="21" rx="5"/>
+      <rect x="158" y="133" width="25" height="21" rx="5"/>
+
+      <!-- Bottom row -->
+      <rect x="74" y="162" width="34" height="19" rx="5"/>
+      <rect x="115" y="162" width="64" height="19" rx="5"/>
+    </g>
+
+    <!-- Active key -->
+    <rect x="126" y="133" width="25" height="21" rx="5" fill="#93C5FD" stroke="#FFFFFF" stroke-width="1.5"/>
+    <path d="M132 143H145" stroke="#315EFB" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Large lightning bolt -->
+  <path d="M144 78L163 25L166 58L204 46L174 86L153 96L160 72Z"
+        fill="url(#gold)" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M163 25L166 58L204 46"
+        stroke="#FFF7D6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Decorative sparkles -->
+  <path d="M81 43L86 55L98 60L86 65L81 77L76 65L64 60L76 55Z" fill="#FBBF24"/>
+  <path d="M204 153L208 162L217 166L208 170L204 179L200 170L191 166L200 162Z" fill="#93B4FF"/>
+  <circle cx="48" cy="170" r="4" fill="#FBBF24"/>
+  <circle cx="213" cy="90" r="3.5" fill="#FBBF24"/>
+</svg>

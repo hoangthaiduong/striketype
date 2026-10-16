@@ -1,0 +1,35 @@
+(function(){
+  window.TS_DATA = window.TS_DATA || {};
+  window.TS_DATA.sentenceTemplates = [
+    {id:"school-1",topic:"School",level:"easy",text:"Students learn something useful when they ask clear questions."},
+    {id:"school-2",topic:"School",level:"easy",text:"Our teacher gives us time to practice each new skill."},
+    {id:"school-3",topic:"School",level:"normal",text:"Working with classmates can help us understand a difficult lesson."},
+    {id:"school-4",topic:"School",level:"normal",text:"A short break often helps students return to their work with fresh ideas."},
+    {id:"school-5",topic:"School",level:"hard",text:"Although the assignment looked challenging at first, careful planning made each step easier."},
+    {id:"daily-1",topic:"Daily Life",level:"easy",text:"I prepare my school bag before I go to bed."},
+    {id:"daily-2",topic:"Daily Life",level:"easy",text:"A healthy routine gives us more energy during the day."},
+    {id:"daily-3",topic:"Daily Life",level:"normal",text:"When I finish my homework early, I have more time for a favorite hobby."},
+    {id:"daily-4",topic:"Daily Life",level:"normal",text:"Small habits can make a busy week feel more organized and relaxed."},
+    {id:"daily-5",topic:"Daily Life",level:"hard",text:"Instead of rushing through every task, I try to choose the most important one first."},
+    {id:"technology-1",topic:"Technology",level:"easy",text:"A computer can help us find information and share our ideas."},
+    {id:"technology-2",topic:"Technology",level:"normal",text:"Good software should be simple to use, reliable, and easy to understand."},
+    {id:"technology-3",topic:"Technology",level:"normal",text:"Before sharing a message online, check that the information is accurate."},
+    {id:"technology-4",topic:"Technology",level:"hard",text:"Technology is most helpful when people use it thoughtfully instead of allowing it to control every moment."},
+    {id:"nature-1",topic:"Nature",level:"easy",text:"Trees give shade to people and homes to many animals."},
+    {id:"nature-2",topic:"Nature",level:"normal",text:"We can protect the environment by saving water and reducing waste."},
+    {id:"nature-3",topic:"Nature",level:"normal",text:"A quiet walk outside can help us notice details that we often miss."},
+    {id:"nature-4",topic:"Nature",level:"hard",text:"Because natural resources are limited, communities need practical plans for using them wisely."},
+    {id:"science-1",topic:"Science",level:"easy",text:"Scientists ask questions and test their ideas with evidence."},
+    {id:"science-2",topic:"Science",level:"normal",text:"A useful experiment changes one factor at a time and records the results."},
+    {id:"science-3",topic:"Science",level:"hard",text:"A surprising result does not always mean an experiment has failed; it may reveal a better question."},
+    {id:"learning-1",topic:"Learning",level:"easy",text:"Practice helps a new skill become easier over time."},
+    {id:"learning-2",topic:"Learning",level:"normal",text:"Mistakes can show us what to practice next, especially when we review them calmly."},
+    {id:"learning-3",topic:"Learning",level:"hard",text:"Progress is rarely a straight line, so steady effort matters more than one perfect result."},
+    {id:"games-1",topic:"Games",level:"easy",text:"A good game gives every player a fair chance to improve."},
+    {id:"games-2",topic:"Games",level:"normal",text:"The best strategy is not always the fastest one; sometimes patience makes the difference."},
+    {id:"games-3",topic:"Games",level:"hard",text:"A close match can be exciting because every careful decision changes the next opportunity."},
+    {id:"general-1",topic:"General",level:"easy",text:"Clear goals make it easier to begin a new task."},
+    {id:"general-2",topic:"General",level:"normal",text:"Learning something difficult takes time, attention, and a willingness to try again."},
+    {id:"general-3",topic:"General",level:"hard",text:"When we explain an idea in simple language, we often discover whether we understand it well."}
+  ];
+})();
